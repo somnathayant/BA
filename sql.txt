@@ -1,0 +1,50 @@
+
+For other refrenece please visits:--
+https://www.w3schools.com/sql/
+
+
+
+
+SELECT – selects data from the database.
+DELETE – removes data from the database.
+UPDATE – overwrites data in the database.
+CREATE DATABASE – creates a new database.
+INSERT INTO – uploads new data into the database.
+CREATE TABLE – creates a new table.
+
+=========================================================================================
+
+SQL Commands: Summary
+
+   1> SQL commands are used to interact with SQL databases.
+   2> Databases with tables  consist of columns (attributes of entries) and rows (individual data entries).
+   3> SQL is not case-sensitive but mainly all capitalization are done.
+    4> one   need to use a semicolon (;)  at the end of each statement;
+
+
+some commands:--
+
+SELECT * FROM emp
+WHERE desiganation='IT';
+
+this will fetch data of only those employee having IT rank.
+
+select e.name,e.desiganation,a.city,a.state, from 
+emp e inner join address a on e.address_id=a.add_id ;
+
+this will fetch data of only those employee and address having the above mentioned fields.
+this is innerjoin.
+
+
+
+ALTER TABLE emp
+ADD DOB date;
+
+this will add this column in emp with date as datatype.
+
+INSERT INTO `emp` VALUES (1,'xx','SOFTWARE ','1985-01-12',1,1,1),
+(2,'YY','IT','1985-05-12',2,2,2),
+(3,'ZZ','AGENT','1985-07-12',3,3,3),
+(4,'AA','SALAES_MANAGER','1986-02-12',4,4,4);
+
+this will enter the values in emp table here use same syntex to insert into other tables as well.
