@@ -1,0 +1,20 @@
+@tag
+Feature: 
+This test for login module
+  @tag1
+  Scenario: I am implementing BDD
+    Given calling each test method
+    And look the outcome
+    When cal test1
+    Then call  all other methods
+====================================================
+
+@tag
+Feature: we want to check login screen functionality
+
+  @tag1
+  Scenario: Enter data and check on login screen
+    Given get the login screen
+    When enter data
+    And check for validation
+    Then click the submit button
