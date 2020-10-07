@@ -29,12 +29,32 @@ WHERE desiganation='IT';
 
 this will fetch data of only those employee having IT rank.
 
+2 table join
+1>
 select e.name,e.desiganation,a.city,a.state, from 
 emp e inner join address a on e.address_id=a.add_id ;
 
+2>
+3 table join
+
+use sql_practice;
+SELECT emp.name ,DOB ,city ,state,department.dept_id from emp
+
+INNER JOIN address ON address.add_id = emp.address_id  INNER JOIN department on department.dept_id = emp.department_id;  
 this will fetch data of only those employee and address having the above mentioned fields.
 this is innerjoin.
 
+4>
+Left join
+
+use sql_practice;
+select * from sql_practice.emp left join address on emp.address_id=address.add_id;
+
+5>
+Right join
+
+use sql_practice;
+select * from sql_practice.emp right join address on emp.address_id=address.add_id;
 
 
 ALTER TABLE emp
@@ -48,3 +68,8 @@ INSERT INTO `emp` VALUES (1,'xx','SOFTWARE ','1985-01-12',1,1,1),
 (4,'AA','SALAES_MANAGER','1986-02-12',4,4,4);
 
 this will enter the values in emp table here use same syntex to insert into other tables as well.
+
+
+For practice --https://www.w3schools.com/sql/sql_count_avg_sum.asp
+
+
