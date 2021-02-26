@@ -56,6 +56,48 @@ Right join
 use sql_practice;
 select * from sql_practice.emp right join address on emp.address_id=address.add_id;
 
+AND and  OR
+---------------
+use sql_practice;
+SELECT emp.name,emp.emp_id,DOB ,city ,state,department.dept_id from emp
+
+INNER JOIN address ON address.add_id = emp.address_id  INNER JOIN department on department.dept_id = emp.department_id where emp.emp_id=5 and city='ALABAMA';
+; 
+
+order By
+----------
+use sql_practice;
+SELECT emp.name,emp.emp_id,DOB ,city ,state,department.dept_id from emp
+
+INNER JOIN address ON address.add_id = emp.address_id  INNER JOIN department on department.dept_id = emp.department_id where emp.emp_id<10 order by city desc;
+
+limit
+--------
+use sql_practice;
+SELECT emp.name,emp.emp_id,DOB ,city ,state,department.dept_id from emp
+
+INNER JOIN address ON address.add_id = emp.address_id  INNER JOIN department on department.dept_id = emp.department_id where emp.emp_id<10 limit 3;
+; 
+
+max and min
+-------------
+use sql_practice;
+SELECT emp.name,emp.emp_id,DOB ,city ,state,department.dept_id from emp
+
+INNER JOIN address ON address.add_id = emp.address_id  INNER JOIN department on department.dept_id = emp.department_id where emp.emp_id=(select max(emp.emp_id) from emp);
+; 
+
+group by 
+---------
+use sql_practice;
+SELECT count(emp.name) as name , city from emp
+
+INNER JOIN address ON address.add_id = emp.address_id  INNER JOIN department on department.dept_id = emp.department_id group by(city) ;
+; 
+
+
+
+
 
 ALTER TABLE emp
 ADD DOB date;
